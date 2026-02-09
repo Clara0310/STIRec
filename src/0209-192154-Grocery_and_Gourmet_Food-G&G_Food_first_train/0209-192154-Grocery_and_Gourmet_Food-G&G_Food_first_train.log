@@ -1,0 +1,446 @@
+2026-02-09 19:21:54-INFO: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:21:54-INFO: main.py --data_name=Grocery_and_Gourmet_Food --max_seq_length=50 --hidden_size=64 --batch_size=256 --msg=G&G_Food_first_train --scheduler warmup+multistep --milestones [25, 50] --loader_type new --gcn_mode batch --do_eval --do_test
+2026-02-09 19:21:54-INFO: alpha                          :                                 0.9
+attention_probs_dropout_prob   :                                 0.1
+avg_window_size                :                                   2
+batch_loss                     :                                   0
+batch_size                     :                                 256
+checkpoint_path                : ../ckpt/0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train.pt
+compile                        :                                   0
+cuda_condition                 :                                   1
+data_dir                       :                            ../data/
+data_name                      :            Grocery_and_Gourmet_Food
+do_eval                        :                                   1
+do_test                        :                                   1
+dropout_rate                   :                                   0
+encoder                        :                                 SAS
+epochs                         :                                  50
+f_neg                          :                                   0
+gamma                          :                                 0.1
+gcn_mode                       :                               batch
+gnn_layer                      :                                   4
+gpu_id                         :                                   0
+graph_path                     : ../data/Grocery_and_Gourmet_Food_graph_50.pkl
+graph_split                    :                                   0
+hidden_act                     :                                gelu
+hidden_dropout_prob            :                                 0.5
+hidden_size                    :                                  64
+initializer_range              :                                0.02
+item_size                      :                               68207
+latest_path                    :    output/PTSR-SAS-Beauty-latest.pt
+loader_type                    :                                 new
+log_dir                        :                                logs
+log_freq                       :                                   1
+log_root                       :                                   .
+log_tb_seperate                :                                   0
+lr_adam                        :                               0.001
+mask_id                        :                               68206
+max_seq_length                 :                                  50
+milestones                     :                            [25, 50]
+min_test_epoch                 :                                   0
+model_name                     :                                PTSR
+msg                            :                G&G_Food_first_train
+no_cuda                        :                                   0
+noise_ratio                    :                                 0.0
+num_attention_heads            :                                   2
+num_hidden_layers              :                                   2
+output_dir                     :                             ../ckpt
+precision                      :                             highest
+save_name                      : 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+scheduler                      :                    warmup+multistep
+seed                           :                                2022
+seqs_path                      : ../data/Grocery_and_Gourmet_Food.txt
+sim                            :                                 dot
+subseq_len                     :                                  50
+subseqs_path                   : ../data/Grocery_and_Gourmet_Food_subseq_50.txt
+subseqs_target_path            : ../data/Grocery_and_Gourmet_Food_1_s.pkl
+target_subseqs_path            : ../data/Grocery_and_Gourmet_Food_t_50.pkl
+tb_dir                         :                                runs
+warm_up_epochs                 :                                   5
+weight_decay                   :                                 0.0
+
+2026-02-09 19:23:11-INFO: Epoch: [000] | lr_adam: 0.0002 | rec_avg_loss: 10.9631 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:23:45-WARNING: Epoch: [000] | HIT@5: 0.0812 | HIT@10: 0.0834 | HIT@20: 0.0847 | NDCG@5: 0.0717 | NDCG@10: 0.0724 | NDCG@20: 0.0727
+2026-02-09 19:23:45-ERROR: Epoch: [000] | HIT@5: 0.0812 | HIT@10: 0.0834 | HIT@20: 0.0847 | NDCG@5: 0.0717 | NDCG@10: 0.0724 | NDCG@20: 0.0727
+2026-02-09 19:24:19-WARNING: Epoch: [000] | HIT@5: 0.0516 | HIT@10: 0.0534 | HIT@20: 0.0544 | NDCG@5: 0.0406 | NDCG@10: 0.0412 | NDCG@20: 0.0415
+2026-02-09 19:24:19-CRITICAL: Epoch: [000] | HIT@5: 0.0516 | HIT@10: 0.0534 | HIT@20: 0.0544 | NDCG@5: 0.0406 | NDCG@10: 0.0412 | NDCG@20: 0.0415
+2026-02-09 19:24:19-CRITICAL: v.s. BEST    | HIT@5: 5155550839114.02% | HIT@10: 5337719530859.83% | HIT@20: 5440299959221.55% | NDCG@5: 4058989809965.86% | NDCG@10: 4119441016490.45% | NDCG@20: 4146037577794.34%
+
+2026-02-09 19:25:23-INFO: Epoch: [001] | lr_adam: 0.0004 | rec_avg_loss: 8.8913 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:25:56-WARNING: Epoch: [001] | HIT@5: 0.1003 | HIT@10: 0.1121 | HIT@20: 0.1309 | NDCG@5: 0.0841 | NDCG@10: 0.0879 | NDCG@20: 0.0926
+2026-02-09 19:25:56-ERROR: Epoch: [001] | HIT@5: 0.1003 | HIT@10: 0.1121 | HIT@20: 0.1309 | NDCG@5: 0.0841 | NDCG@10: 0.0879 | NDCG@20: 0.0926
+2026-02-09 19:26:36-WARNING: Epoch: [001] | HIT@5: 0.0648 | HIT@10: 0.0734 | HIT@20: 0.0883 | NDCG@5: 0.0522 | NDCG@10: 0.0549 | NDCG@20: 0.0587
+2026-02-09 19:26:36-CRITICAL: Epoch: [001] | HIT@5: 0.0648 | HIT@10: 0.0734 | HIT@20: 0.0883 | NDCG@5: 0.0522 | NDCG@10: 0.0549 | NDCG@20: 0.0587
+2026-02-09 19:26:36-CRITICAL: v.s. BEST    | HIT@5: 25.73% | HIT@10: 37.51% | HIT@20: 62.22% | NDCG@5: 28.51% | NDCG@10: 33.31% | NDCG@20: 41.48%
+
+2026-02-09 19:27:52-INFO: Epoch: [002] | lr_adam: 0.0006 | rec_avg_loss: 8.3908 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:28:45-WARNING: Epoch: [002] | HIT@5: 0.1204 | HIT@10: 0.1342 | HIT@20: 0.1540 | NDCG@5: 0.1038 | NDCG@10: 0.1082 | NDCG@20: 0.1132
+2026-02-09 19:28:45-ERROR: Epoch: [002] | HIT@5: 0.1204 | HIT@10: 0.1342 | HIT@20: 0.1540 | NDCG@5: 0.1038 | NDCG@10: 0.1082 | NDCG@20: 0.1132
+2026-02-09 19:29:38-WARNING: Epoch: [002] | HIT@5: 0.0839 | HIT@10: 0.0950 | HIT@20: 0.1099 | NDCG@5: 0.0704 | NDCG@10: 0.0740 | NDCG@20: 0.0777
+2026-02-09 19:29:38-CRITICAL: Epoch: [002] | HIT@5: 0.0839 | HIT@10: 0.0950 | HIT@20: 0.1099 | NDCG@5: 0.0704 | NDCG@10: 0.0740 | NDCG@20: 0.0777
+2026-02-09 19:29:38-CRITICAL: v.s. BEST    | HIT@5: 29.39% | HIT@10: 29.40% | HIT@20: 24.51% | NDCG@5: 35.03% | NDCG@10: 34.73% | NDCG@20: 32.51%
+
+2026-02-09 19:30:54-INFO: Epoch: [003] | lr_adam: 0.0008 | rec_avg_loss: 8.1546 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:31:48-WARNING: Epoch: [003] | HIT@5: 0.1275 | HIT@10: 0.1437 | HIT@20: 0.1656 | NDCG@5: 0.1074 | NDCG@10: 0.1126 | NDCG@20: 0.1181
+2026-02-09 19:31:48-ERROR: Epoch: [003] | HIT@5: 0.1275 | HIT@10: 0.1437 | HIT@20: 0.1656 | NDCG@5: 0.1074 | NDCG@10: 0.1126 | NDCG@20: 0.1181
+2026-02-09 19:32:42-WARNING: Epoch: [003] | HIT@5: 0.0912 | HIT@10: 0.1052 | HIT@20: 0.1230 | NDCG@5: 0.0777 | NDCG@10: 0.0822 | NDCG@20: 0.0867
+2026-02-09 19:32:42-CRITICAL: Epoch: [003] | HIT@5: 0.0912 | HIT@10: 0.1052 | HIT@20: 0.1230 | NDCG@5: 0.0777 | NDCG@10: 0.0822 | NDCG@20: 0.0867
+2026-02-09 19:32:42-CRITICAL: v.s. BEST    | HIT@5: 8.79% | HIT@10: 10.80% | HIT@20: 11.89% | NDCG@5: 10.33% | NDCG@10: 11.10% | NDCG@20: 11.50%
+
+2026-02-09 19:33:58-INFO: Epoch: [004] | lr_adam: 0.001 | rec_avg_loss: 7.9902 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:34:52-WARNING: Epoch: [004] | HIT@5: 0.1310 | HIT@10: 0.1481 | HIT@20: 0.1713 | NDCG@5: 0.1095 | NDCG@10: 0.1150 | NDCG@20: 0.1208
+2026-02-09 19:34:52-ERROR: Epoch: [004] | HIT@5: 0.1310 | HIT@10: 0.1481 | HIT@20: 0.1713 | NDCG@5: 0.1095 | NDCG@10: 0.1150 | NDCG@20: 0.1208
+2026-02-09 19:35:47-WARNING: Epoch: [004] | HIT@5: 0.0947 | HIT@10: 0.1080 | HIT@20: 0.1267 | NDCG@5: 0.0796 | NDCG@10: 0.0839 | NDCG@20: 0.0886
+2026-02-09 19:35:47-CRITICAL: Epoch: [004] | HIT@5: 0.0947 | HIT@10: 0.1080 | HIT@20: 0.1267 | NDCG@5: 0.0796 | NDCG@10: 0.0839 | NDCG@20: 0.0886
+2026-02-09 19:35:47-CRITICAL: v.s. BEST    | HIT@5: 3.80% | HIT@10: 2.64% | HIT@20: 3.04% | NDCG@5: 2.43% | NDCG@10: 2.01% | NDCG@20: 2.17%
+
+2026-02-09 19:37:03-INFO: Epoch: [005] | lr_adam: 0.001 | rec_avg_loss: 7.8552 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:37:57-WARNING: Epoch: [005] | HIT@5: 0.1351 | HIT@10: 0.1533 | HIT@20: 0.1763 | NDCG@5: 0.1134 | NDCG@10: 0.1192 | NDCG@20: 0.1250
+2026-02-09 19:37:57-ERROR: Epoch: [005] | HIT@5: 0.1351 | HIT@10: 0.1533 | HIT@20: 0.1763 | NDCG@5: 0.1134 | NDCG@10: 0.1192 | NDCG@20: 0.1250
+2026-02-09 19:38:52-WARNING: Epoch: [005] | HIT@5: 0.0994 | HIT@10: 0.1138 | HIT@20: 0.1325 | NDCG@5: 0.0832 | NDCG@10: 0.0878 | NDCG@20: 0.0925
+2026-02-09 19:38:52-CRITICAL: Epoch: [005] | HIT@5: 0.0994 | HIT@10: 0.1138 | HIT@20: 0.1325 | NDCG@5: 0.0832 | NDCG@10: 0.0878 | NDCG@20: 0.0925
+2026-02-09 19:38:52-CRITICAL: v.s. BEST    | HIT@5: 4.95% | HIT@10: 5.35% | HIT@20: 4.55% | NDCG@5: 4.50% | NDCG@10: 4.74% | NDCG@20: 4.49%
+
+2026-02-09 19:40:08-INFO: Epoch: [006] | lr_adam: 0.001 | rec_avg_loss: 7.6819 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:41:02-WARNING: Epoch: [006] | HIT@5: 0.1374 | HIT@10: 0.1555 | HIT@20: 0.1810 | NDCG@5: 0.1146 | NDCG@10: 0.1204 | NDCG@20: 0.1268
+2026-02-09 19:41:02-ERROR: Epoch: [006] | HIT@5: 0.1374 | HIT@10: 0.1555 | HIT@20: 0.1810 | NDCG@5: 0.1146 | NDCG@10: 0.1204 | NDCG@20: 0.1268
+2026-02-09 19:41:56-WARNING: Epoch: [006] | HIT@5: 0.1006 | HIT@10: 0.1155 | HIT@20: 0.1356 | NDCG@5: 0.0832 | NDCG@10: 0.0880 | NDCG@20: 0.0930
+2026-02-09 19:41:56-CRITICAL: Epoch: [006] | HIT@5: 0.1006 | HIT@10: 0.1155 | HIT@20: 0.1356 | NDCG@5: 0.0832 | NDCG@10: 0.0880 | NDCG@20: 0.0930
+2026-02-09 19:41:56-CRITICAL: v.s. BEST    | HIT@5: 1.17% | HIT@10: 1.54% | HIT@20: 2.40% | NDCG@5: 0.02% | NDCG@10: 0.18% | NDCG@20: 0.54%
+
+2026-02-09 19:43:12-INFO: Epoch: [007] | lr_adam: 0.001 | rec_avg_loss: 7.5373 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:44:06-WARNING: Epoch: [007] | HIT@5: 0.1375 | HIT@10: 0.1563 | HIT@20: 0.1830 | NDCG@5: 0.1177 | NDCG@10: 0.1237 | NDCG@20: 0.1304
+2026-02-09 19:44:06-ERROR: Epoch: [007] | HIT@5: 0.1375 | HIT@10: 0.1563 | HIT@20: 0.1830 | NDCG@5: 0.1177 | NDCG@10: 0.1237 | NDCG@20: 0.1304
+2026-02-09 19:45:00-WARNING: Epoch: [007] | HIT@5: 0.1020 | HIT@10: 0.1167 | HIT@20: 0.1379 | NDCG@5: 0.0854 | NDCG@10: 0.0901 | NDCG@20: 0.0954
+2026-02-09 19:45:00-CRITICAL: Epoch: [007] | HIT@5: 0.1020 | HIT@10: 0.1167 | HIT@20: 0.1379 | NDCG@5: 0.0854 | NDCG@10: 0.0901 | NDCG@20: 0.0954
+2026-02-09 19:45:00-CRITICAL: v.s. BEST    | HIT@5: 1.46% | HIT@10: 1.01% | HIT@20: 1.67% | NDCG@5: 2.63% | NDCG@10: 2.40% | NDCG@20: 2.59%
+
+2026-02-09 19:46:16-INFO: Epoch: [008] | lr_adam: 0.001 | rec_avg_loss: 7.4068 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:47:09-WARNING: Epoch: [008] | HIT@5: 0.1393 | HIT@10: 0.1582 | HIT@20: 0.1834 | NDCG@5: 0.1178 | NDCG@10: 0.1239 | NDCG@20: 0.1302
+2026-02-09 19:47:09-ERROR: Epoch: [008] | HIT@5: 0.1393 | HIT@10: 0.1582 | HIT@20: 0.1834 | NDCG@5: 0.1178 | NDCG@10: 0.1239 | NDCG@20: 0.1304
+2026-02-09 19:47:09-DEBUG: >>> EarlyStopping counter: 1 out of 50
+2026-02-09 19:48:02-WARNING: Epoch: [008] | HIT@5: 0.1026 | HIT@10: 0.1178 | HIT@20: 0.1380 | NDCG@5: 0.0847 | NDCG@10: 0.0896 | NDCG@20: 0.0946
+2026-02-09 19:48:02-CRITICAL: Epoch: [008] | HIT@5: 0.1026 | HIT@10: 0.1178 | HIT@20: 0.1380 | NDCG@5: 0.0854 | NDCG@10: 0.0901 | NDCG@20: 0.0954
+2026-02-09 19:48:02-CRITICAL: v.s. BEST    | HIT@5: 0.55% | HIT@10: 0.95% | HIT@20: 0.05% | NDCG@5: -0.84% | NDCG@10: -0.56% | NDCG@20: -0.83%
+
+2026-02-09 19:49:18-INFO: Epoch: [009] | lr_adam: 0.001 | rec_avg_loss: 7.2957 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:50:11-WARNING: Epoch: [009] | HIT@5: 0.1403 | HIT@10: 0.1598 | HIT@20: 0.1857 | NDCG@5: 0.1190 | NDCG@10: 0.1253 | NDCG@20: 0.1318
+2026-02-09 19:50:11-ERROR: Epoch: [009] | HIT@5: 0.1403 | HIT@10: 0.1598 | HIT@20: 0.1857 | NDCG@5: 0.1190 | NDCG@10: 0.1253 | NDCG@20: 0.1318
+2026-02-09 19:51:04-WARNING: Epoch: [009] | HIT@5: 0.1020 | HIT@10: 0.1177 | HIT@20: 0.1390 | NDCG@5: 0.0846 | NDCG@10: 0.0896 | NDCG@20: 0.0950
+2026-02-09 19:51:04-CRITICAL: Epoch: [009] | HIT@5: 0.1026 | HIT@10: 0.1178 | HIT@20: 0.1390 | NDCG@5: 0.0854 | NDCG@10: 0.0901 | NDCG@20: 0.0954
+2026-02-09 19:51:04-CRITICAL: v.s. BEST    | HIT@5: -0.53% | HIT@10: -0.14% | HIT@20: 0.77% | NDCG@5: -0.92% | NDCG@10: -0.55% | NDCG@20: -0.46%
+
+2026-02-09 19:52:20-INFO: Epoch: [010] | lr_adam: 0.001 | rec_avg_loss: 7.196 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:53:12-WARNING: Epoch: [010] | HIT@5: 0.1413 | HIT@10: 0.1607 | HIT@20: 0.1856 | NDCG@5: 0.1189 | NDCG@10: 0.1252 | NDCG@20: 0.1315
+2026-02-09 19:53:12-ERROR: Epoch: [010] | HIT@5: 0.1413 | HIT@10: 0.1607 | HIT@20: 0.1857 | NDCG@5: 0.1190 | NDCG@10: 0.1253 | NDCG@20: 0.1318
+2026-02-09 19:53:12-DEBUG: >>> EarlyStopping counter: 1 out of 50
+2026-02-09 19:54:05-WARNING: Epoch: [010] | HIT@5: 0.1037 | HIT@10: 0.1194 | HIT@20: 0.1399 | NDCG@5: 0.0833 | NDCG@10: 0.0884 | NDCG@20: 0.0935
+2026-02-09 19:54:05-CRITICAL: Epoch: [010] | HIT@5: 0.1037 | HIT@10: 0.1194 | HIT@20: 0.1399 | NDCG@5: 0.0854 | NDCG@10: 0.0901 | NDCG@20: 0.0954
+2026-02-09 19:54:05-CRITICAL: v.s. BEST    | HIT@5: 1.03% | HIT@10: 1.37% | HIT@20: 0.65% | NDCG@5: -2.44% | NDCG@10: -1.91% | NDCG@20: -2.00%
+
+2026-02-09 19:55:21-INFO: Epoch: [011] | lr_adam: 0.001 | rec_avg_loss: 7.107 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:56:13-WARNING: Epoch: [011] | HIT@5: 0.1407 | HIT@10: 0.1612 | HIT@20: 0.1866 | NDCG@5: 0.1184 | NDCG@10: 0.1250 | NDCG@20: 0.1314
+2026-02-09 19:56:13-ERROR: Epoch: [011] | HIT@5: 0.1413 | HIT@10: 0.1612 | HIT@20: 0.1866 | NDCG@5: 0.1190 | NDCG@10: 0.1253 | NDCG@20: 0.1318
+2026-02-09 19:56:13-DEBUG: >>> EarlyStopping counter: 2 out of 50
+2026-02-09 19:57:05-WARNING: Epoch: [011] | HIT@5: 0.1030 | HIT@10: 0.1198 | HIT@20: 0.1401 | NDCG@5: 0.0860 | NDCG@10: 0.0913 | NDCG@20: 0.0964
+2026-02-09 19:57:05-CRITICAL: Epoch: [011] | HIT@5: 0.1037 | HIT@10: 0.1198 | HIT@20: 0.1401 | NDCG@5: 0.0860 | NDCG@10: 0.0913 | NDCG@20: 0.0964
+2026-02-09 19:57:05-CRITICAL: v.s. BEST    | HIT@5: -0.61% | HIT@10: 0.28% | HIT@20: 0.13% | NDCG@5: 0.69% | NDCG@10: 1.34% | NDCG@20: 1.03%
+
+2026-02-09 19:58:21-INFO: Epoch: [012] | lr_adam: 0.001 | rec_avg_loss: 7.0354 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 19:59:14-WARNING: Epoch: [012] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1872 | NDCG@5: 0.1208 | NDCG@10: 0.1271 | NDCG@20: 0.1333
+2026-02-09 19:59:14-ERROR: Epoch: [012] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1872 | NDCG@5: 0.1208 | NDCG@10: 0.1271 | NDCG@20: 0.1333
+2026-02-09 20:00:07-WARNING: Epoch: [012] | HIT@5: 0.1038 | HIT@10: 0.1199 | HIT@20: 0.1405 | NDCG@5: 0.0864 | NDCG@10: 0.0915 | NDCG@20: 0.0967
+2026-02-09 20:00:07-CRITICAL: Epoch: [012] | HIT@5: 0.1038 | HIT@10: 0.1199 | HIT@20: 0.1405 | NDCG@5: 0.0864 | NDCG@10: 0.0915 | NDCG@20: 0.0967
+2026-02-09 20:00:07-CRITICAL: v.s. BEST    | HIT@5: 0.17% | HIT@10: 0.15% | HIT@20: 0.29% | NDCG@5: 0.45% | NDCG@10: 0.21% | NDCG@20: 0.27%
+
+2026-02-09 20:01:23-INFO: Epoch: [013] | lr_adam: 0.001 | rec_avg_loss: 6.9695 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:02:15-WARNING: Epoch: [013] | HIT@5: 0.1419 | HIT@10: 0.1619 | HIT@20: 0.1877 | NDCG@5: 0.1206 | NDCG@10: 0.1270 | NDCG@20: 0.1335
+2026-02-09 20:02:15-ERROR: Epoch: [013] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1877 | NDCG@5: 0.1208 | NDCG@10: 0.1271 | NDCG@20: 0.1335
+2026-02-09 20:03:09-WARNING: Epoch: [013] | HIT@5: 0.1036 | HIT@10: 0.1205 | HIT@20: 0.1408 | NDCG@5: 0.0864 | NDCG@10: 0.0919 | NDCG@20: 0.0969
+2026-02-09 20:03:09-CRITICAL: Epoch: [013] | HIT@5: 0.1038 | HIT@10: 0.1205 | HIT@20: 0.1408 | NDCG@5: 0.0864 | NDCG@10: 0.0919 | NDCG@20: 0.0969
+2026-02-09 20:03:09-CRITICAL: v.s. BEST    | HIT@5: -0.20% | HIT@10: 0.49% | HIT@20: 0.20% | NDCG@5: 0.10% | NDCG@10: 0.40% | NDCG@20: 0.27%
+
+2026-02-09 20:04:25-INFO: Epoch: [014] | lr_adam: 0.001 | rec_avg_loss: 6.9152 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:05:17-WARNING: Epoch: [014] | HIT@5: 0.1420 | HIT@10: 0.1609 | HIT@20: 0.1863 | NDCG@5: 0.1197 | NDCG@10: 0.1258 | NDCG@20: 0.1322
+2026-02-09 20:05:17-ERROR: Epoch: [014] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1877 | NDCG@5: 0.1208 | NDCG@10: 0.1271 | NDCG@20: 0.1335
+2026-02-09 20:05:17-DEBUG: >>> EarlyStopping counter: 1 out of 50
+2026-02-09 20:06:10-WARNING: Epoch: [014] | HIT@5: 0.1034 | HIT@10: 0.1198 | HIT@20: 0.1401 | NDCG@5: 0.0862 | NDCG@10: 0.0914 | NDCG@20: 0.0966
+2026-02-09 20:06:10-CRITICAL: Epoch: [014] | HIT@5: 0.1038 | HIT@10: 0.1205 | HIT@20: 0.1408 | NDCG@5: 0.0864 | NDCG@10: 0.0919 | NDCG@20: 0.0969
+2026-02-09 20:06:10-CRITICAL: v.s. BEST    | HIT@5: -0.37% | HIT@10: -0.65% | HIT@20: -0.48% | NDCG@5: -0.24% | NDCG@10: -0.45% | NDCG@20: -0.36%
+
+2026-02-09 20:07:26-INFO: Epoch: [015] | lr_adam: 0.001 | rec_avg_loss: 6.8673 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:08:19-WARNING: Epoch: [015] | HIT@5: 0.1421 | HIT@10: 0.1615 | HIT@20: 0.1871 | NDCG@5: 0.1186 | NDCG@10: 0.1248 | NDCG@20: 0.1313
+2026-02-09 20:08:19-ERROR: Epoch: [015] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1877 | NDCG@5: 0.1208 | NDCG@10: 0.1271 | NDCG@20: 0.1335
+2026-02-09 20:08:19-DEBUG: >>> EarlyStopping counter: 2 out of 50
+2026-02-09 20:09:12-WARNING: Epoch: [015] | HIT@5: 0.1052 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:09:12-CRITICAL: Epoch: [015] | HIT@5: 0.1052 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:09:12-CRITICAL: v.s. BEST    | HIT@5: 1.35% | HIT@10: 0.38% | HIT@20: 1.11% | NDCG@5: 1.19% | NDCG@10: 0.72% | NDCG@20: 0.99%
+
+2026-02-09 20:10:34-INFO: Epoch: [016] | lr_adam: 0.001 | rec_avg_loss: 6.8277 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:11:28-WARNING: Epoch: [016] | HIT@5: 0.1418 | HIT@10: 0.1619 | HIT@20: 0.1869 | NDCG@5: 0.1197 | NDCG@10: 0.1261 | NDCG@20: 0.1324
+2026-02-09 20:11:28-ERROR: Epoch: [016] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1877 | NDCG@5: 0.1208 | NDCG@10: 0.1271 | NDCG@20: 0.1335
+2026-02-09 20:11:28-DEBUG: >>> EarlyStopping counter: 3 out of 50
+2026-02-09 20:12:21-WARNING: Epoch: [016] | HIT@5: 0.1037 | HIT@10: 0.1195 | HIT@20: 0.1416 | NDCG@5: 0.0833 | NDCG@10: 0.0883 | NDCG@20: 0.0939
+2026-02-09 20:12:21-CRITICAL: Epoch: [016] | HIT@5: 0.1052 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:12:21-CRITICAL: v.s. BEST    | HIT@5: -1.45% | HIT@10: -1.23% | HIT@20: -0.56% | NDCG@5: -4.78% | NDCG@10: -4.54% | NDCG@20: -4.11%
+
+2026-02-09 20:14:29-INFO: Epoch: [017] | lr_adam: 0.001 | rec_avg_loss: 6.787 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:15:23-WARNING: Epoch: [017] | HIT@5: 0.1423 | HIT@10: 0.1621 | HIT@20: 0.1877 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:15:23-ERROR: Epoch: [017] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1877 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:16:18-WARNING: Epoch: [017] | HIT@5: 0.1050 | HIT@10: 0.1200 | HIT@20: 0.1409 | NDCG@5: 0.0868 | NDCG@10: 0.0916 | NDCG@20: 0.0969
+2026-02-09 20:16:18-CRITICAL: Epoch: [017] | HIT@5: 0.1052 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:16:18-CRITICAL: v.s. BEST    | HIT@5: -0.27% | HIT@10: -0.82% | HIT@20: -1.04% | NDCG@5: -0.77% | NDCG@10: -0.96% | NDCG@20: -1.06%
+
+2026-02-09 20:18:23-INFO: Epoch: [018] | lr_adam: 0.001 | rec_avg_loss: 6.7551 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:19:16-WARNING: Epoch: [018] | HIT@5: 0.1424 | HIT@10: 0.1615 | HIT@20: 0.1878 | NDCG@5: 0.1210 | NDCG@10: 0.1272 | NDCG@20: 0.1338
+2026-02-09 20:19:16-ERROR: Epoch: [018] | HIT@5: 0.1431 | HIT@10: 0.1627 | HIT@20: 0.1878 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:19:16-DEBUG: >>> EarlyStopping counter: 1 out of 50
+2026-02-09 20:20:10-WARNING: Epoch: [018] | HIT@5: 0.1049 | HIT@10: 0.1205 | HIT@20: 0.1415 | NDCG@5: 0.0865 | NDCG@10: 0.0915 | NDCG@20: 0.0968
+2026-02-09 20:20:10-CRITICAL: Epoch: [018] | HIT@5: 0.1052 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:20:10-CRITICAL: v.s. BEST    | HIT@5: -0.30% | HIT@10: -0.38% | HIT@20: -0.60% | NDCG@5: -1.09% | NDCG@10: -1.09% | NDCG@20: -1.14%
+
+2026-02-09 20:22:17-INFO: Epoch: [019] | lr_adam: 0.001 | rec_avg_loss: 6.7254 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:23:10-WARNING: Epoch: [019] | HIT@5: 0.1430 | HIT@10: 0.1632 | HIT@20: 0.1890 | NDCG@5: 0.1206 | NDCG@10: 0.1271 | NDCG@20: 0.1336
+2026-02-09 20:23:10-ERROR: Epoch: [019] | HIT@5: 0.1431 | HIT@10: 0.1632 | HIT@20: 0.1890 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:23:10-DEBUG: >>> EarlyStopping counter: 2 out of 50
+2026-02-09 20:24:04-WARNING: Epoch: [019] | HIT@5: 0.1057 | HIT@10: 0.1205 | HIT@20: 0.1422 | NDCG@5: 0.0874 | NDCG@10: 0.0921 | NDCG@20: 0.0975
+2026-02-09 20:24:04-CRITICAL: Epoch: [019] | HIT@5: 0.1057 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:24:04-CRITICAL: v.s. BEST    | HIT@5: 0.49% | HIT@10: -0.44% | HIT@20: -0.14% | NDCG@5: -0.10% | NDCG@10: -0.47% | NDCG@20: -0.37%
+
+2026-02-09 20:26:10-INFO: Epoch: [020] | lr_adam: 0.001 | rec_avg_loss: 6.6956 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:27:04-WARNING: Epoch: [020] | HIT@5: 0.1421 | HIT@10: 0.1626 | HIT@20: 0.1883 | NDCG@5: 0.1193 | NDCG@10: 0.1259 | NDCG@20: 0.1324
+2026-02-09 20:27:04-ERROR: Epoch: [020] | HIT@5: 0.1431 | HIT@10: 0.1632 | HIT@20: 0.1890 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:27:04-DEBUG: >>> EarlyStopping counter: 3 out of 50
+2026-02-09 20:27:59-WARNING: Epoch: [020] | HIT@5: 0.1029 | HIT@10: 0.1193 | HIT@20: 0.1409 | NDCG@5: 0.0823 | NDCG@10: 0.0876 | NDCG@20: 0.0931
+2026-02-09 20:27:59-CRITICAL: Epoch: [020] | HIT@5: 0.1057 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:27:59-CRITICAL: v.s. BEST    | HIT@5: -2.68% | HIT@10: -1.36% | HIT@20: -1.02% | NDCG@5: -5.88% | NDCG@10: -5.29% | NDCG@20: -4.96%
+
+2026-02-09 20:30:04-INFO: Epoch: [021] | lr_adam: 0.001 | rec_avg_loss: 6.6732 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:30:58-WARNING: Epoch: [021] | HIT@5: 0.1417 | HIT@10: 0.1626 | HIT@20: 0.1893 | NDCG@5: 0.1203 | NDCG@10: 0.1270 | NDCG@20: 0.1337
+2026-02-09 20:30:58-ERROR: Epoch: [021] | HIT@5: 0.1431 | HIT@10: 0.1632 | HIT@20: 0.1893 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:30:58-DEBUG: >>> EarlyStopping counter: 4 out of 50
+2026-02-09 20:31:52-WARNING: Epoch: [021] | HIT@5: 0.1049 | HIT@10: 0.1197 | HIT@20: 0.1407 | NDCG@5: 0.0869 | NDCG@10: 0.0917 | NDCG@20: 0.0970
+2026-02-09 20:31:52-CRITICAL: Epoch: [021] | HIT@5: 0.1057 | HIT@10: 0.1210 | HIT@20: 0.1424 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:31:52-CRITICAL: v.s. BEST    | HIT@5: -0.79% | HIT@10: -1.07% | HIT@20: -1.13% | NDCG@5: -0.63% | NDCG@10: -0.93% | NDCG@20: -0.97%
+
+2026-02-09 20:33:59-INFO: Epoch: [022] | lr_adam: 0.001 | rec_avg_loss: 6.6487 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:34:53-WARNING: Epoch: [022] | HIT@5: 0.1427 | HIT@10: 0.1625 | HIT@20: 0.1879 | NDCG@5: 0.1204 | NDCG@10: 0.1268 | NDCG@20: 0.1332
+2026-02-09 20:34:53-ERROR: Epoch: [022] | HIT@5: 0.1431 | HIT@10: 0.1632 | HIT@20: 0.1893 | NDCG@5: 0.1211 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:34:53-DEBUG: >>> EarlyStopping counter: 5 out of 50
+2026-02-09 20:35:47-WARNING: Epoch: [022] | HIT@5: 0.1047 | HIT@10: 0.1217 | HIT@20: 0.1426 | NDCG@5: 0.0870 | NDCG@10: 0.0925 | NDCG@20: 0.0977
+2026-02-09 20:35:47-CRITICAL: Epoch: [022] | HIT@5: 0.1057 | HIT@10: 0.1217 | HIT@20: 0.1426 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:35:47-CRITICAL: v.s. BEST    | HIT@5: -1.02% | HIT@10: 0.61% | HIT@20: 0.15% | NDCG@5: -0.57% | NDCG@10: -0.08% | NDCG@20: -0.21%
+
+2026-02-09 20:37:52-INFO: Epoch: [023] | lr_adam: 0.001 | rec_avg_loss: 6.6295 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:38:47-WARNING: Epoch: [023] | HIT@5: 0.1426 | HIT@10: 0.1618 | HIT@20: 0.1875 | NDCG@5: 0.1212 | NDCG@10: 0.1274 | NDCG@20: 0.1339
+2026-02-09 20:38:47-ERROR: Epoch: [023] | HIT@5: 0.1431 | HIT@10: 0.1632 | HIT@20: 0.1893 | NDCG@5: 0.1212 | NDCG@10: 0.1275 | NDCG@20: 0.1340
+2026-02-09 20:38:47-DEBUG: >>> EarlyStopping counter: 6 out of 50
+2026-02-09 20:39:41-WARNING: Epoch: [023] | HIT@5: 0.1039 | HIT@10: 0.1201 | HIT@20: 0.1420 | NDCG@5: 0.0861 | NDCG@10: 0.0914 | NDCG@20: 0.0969
+2026-02-09 20:39:41-CRITICAL: Epoch: [023] | HIT@5: 0.1057 | HIT@10: 0.1217 | HIT@20: 0.1426 | NDCG@5: 0.0875 | NDCG@10: 0.0925 | NDCG@20: 0.0979
+2026-02-09 20:39:41-CRITICAL: v.s. BEST    | HIT@5: -1.77% | HIT@10: -1.32% | HIT@20: -0.43% | NDCG@5: -1.56% | NDCG@10: -1.25% | NDCG@20: -1.07%
+
+2026-02-09 20:41:46-INFO: Epoch: [024] | lr_adam: 0.0001 | rec_avg_loss: 6.605 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:42:41-WARNING: Epoch: [024] | HIT@5: 0.1438 | HIT@10: 0.1643 | HIT@20: 0.1903 | NDCG@5: 0.1227 | NDCG@10: 0.1293 | NDCG@20: 0.1359
+2026-02-09 20:42:41-ERROR: Epoch: [024] | HIT@5: 0.1438 | HIT@10: 0.1643 | HIT@20: 0.1903 | NDCG@5: 0.1227 | NDCG@10: 0.1293 | NDCG@20: 0.1359
+2026-02-09 20:43:36-WARNING: Epoch: [024] | HIT@5: 0.1050 | HIT@10: 0.1214 | HIT@20: 0.1424 | NDCG@5: 0.0877 | NDCG@10: 0.0930 | NDCG@20: 0.0983
+2026-02-09 20:43:36-CRITICAL: Epoch: [024] | HIT@5: 0.1057 | HIT@10: 0.1217 | HIT@20: 0.1426 | NDCG@5: 0.0877 | NDCG@10: 0.0930 | NDCG@20: 0.0983
+2026-02-09 20:43:36-CRITICAL: v.s. BEST    | HIT@5: -0.67% | HIT@10: -0.26% | HIT@20: -0.10% | NDCG@5: 0.28% | NDCG@10: 0.48% | NDCG@20: 0.36%
+
+2026-02-09 20:45:43-INFO: Epoch: [025] | lr_adam: 0.0001 | rec_avg_loss: 6.2259 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:46:37-WARNING: Epoch: [025] | HIT@5: 0.1484 | HIT@10: 0.1681 | HIT@20: 0.1939 | NDCG@5: 0.1256 | NDCG@10: 0.1320 | NDCG@20: 0.1385
+2026-02-09 20:46:37-ERROR: Epoch: [025] | HIT@5: 0.1484 | HIT@10: 0.1681 | HIT@20: 0.1939 | NDCG@5: 0.1256 | NDCG@10: 0.1320 | NDCG@20: 0.1385
+2026-02-09 20:47:33-WARNING: Epoch: [025] | HIT@5: 0.1093 | HIT@10: 0.1261 | HIT@20: 0.1472 | NDCG@5: 0.0908 | NDCG@10: 0.0962 | NDCG@20: 0.1015
+2026-02-09 20:47:33-CRITICAL: Epoch: [025] | HIT@5: 0.1093 | HIT@10: 0.1261 | HIT@20: 0.1472 | NDCG@5: 0.0908 | NDCG@10: 0.0962 | NDCG@20: 0.1015
+2026-02-09 20:47:33-CRITICAL: v.s. BEST    | HIT@5: 3.35% | HIT@10: 3.59% | HIT@20: 3.28% | NDCG@5: 3.52% | NDCG@10: 3.49% | NDCG@20: 3.32%
+
+2026-02-09 20:49:37-INFO: Epoch: [026] | lr_adam: 0.0001 | rec_avg_loss: 6.1893 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:50:32-WARNING: Epoch: [026] | HIT@5: 0.1489 | HIT@10: 0.1683 | HIT@20: 0.1945 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 20:50:32-ERROR: Epoch: [026] | HIT@5: 0.1489 | HIT@10: 0.1683 | HIT@20: 0.1945 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 20:51:26-WARNING: Epoch: [026] | HIT@5: 0.1093 | HIT@10: 0.1262 | HIT@20: 0.1479 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 20:51:26-CRITICAL: Epoch: [026] | HIT@5: 0.1093 | HIT@10: 0.1262 | HIT@20: 0.1479 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 20:51:26-CRITICAL: v.s. BEST    | HIT@5: -0.00% | HIT@10: 0.07% | HIT@20: 0.43% | NDCG@5: 0.35% | NDCG@10: 0.37% | NDCG@20: 0.49%
+
+2026-02-09 20:53:32-INFO: Epoch: [027] | lr_adam: 0.0001 | rec_avg_loss: 6.1757 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:54:26-WARNING: Epoch: [027] | HIT@5: 0.1485 | HIT@10: 0.1683 | HIT@20: 0.1946 | NDCG@5: 0.1248 | NDCG@10: 0.1312 | NDCG@20: 0.1378
+2026-02-09 20:54:26-ERROR: Epoch: [027] | HIT@5: 0.1489 | HIT@10: 0.1683 | HIT@20: 0.1946 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 20:54:26-DEBUG: >>> EarlyStopping counter: 1 out of 50
+2026-02-09 20:55:20-WARNING: Epoch: [027] | HIT@5: 0.1098 | HIT@10: 0.1265 | HIT@20: 0.1478 | NDCG@5: 0.0910 | NDCG@10: 0.0963 | NDCG@20: 0.1017
+2026-02-09 20:55:20-CRITICAL: Epoch: [027] | HIT@5: 0.1098 | HIT@10: 0.1265 | HIT@20: 0.1479 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 20:55:20-CRITICAL: v.s. BEST    | HIT@5: 0.49% | HIT@10: 0.25% | HIT@20: -0.07% | NDCG@5: -0.16% | NDCG@10: -0.25% | NDCG@20: -0.33%
+
+2026-02-09 20:57:28-INFO: Epoch: [028] | lr_adam: 0.0001 | rec_avg_loss: 6.1647 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 20:58:22-WARNING: Epoch: [028] | HIT@5: 0.1490 | HIT@10: 0.1681 | HIT@20: 0.1953 | NDCG@5: 0.1254 | NDCG@10: 0.1316 | NDCG@20: 0.1384
+2026-02-09 20:58:22-ERROR: Epoch: [028] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 20:58:22-DEBUG: >>> EarlyStopping counter: 2 out of 50
+2026-02-09 20:59:16-WARNING: Epoch: [028] | HIT@5: 0.1097 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0909 | NDCG@10: 0.0964 | NDCG@20: 0.1018
+2026-02-09 20:59:16-CRITICAL: Epoch: [028] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 20:59:16-CRITICAL: v.s. BEST    | HIT@5: -0.11% | HIT@10: 0.25% | HIT@20: 0.31% | NDCG@5: -0.26% | NDCG@10: -0.19% | NDCG@20: -0.22%
+
+2026-02-09 21:01:21-INFO: Epoch: [029] | lr_adam: 0.0001 | rec_avg_loss: 6.1606 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:02:15-WARNING: Epoch: [029] | HIT@5: 0.1490 | HIT@10: 0.1682 | HIT@20: 0.1947 | NDCG@5: 0.1248 | NDCG@10: 0.1310 | NDCG@20: 0.1377
+2026-02-09 21:02:15-ERROR: Epoch: [029] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:02:15-DEBUG: >>> EarlyStopping counter: 3 out of 50
+2026-02-09 21:03:10-WARNING: Epoch: [029] | HIT@5: 0.1094 | HIT@10: 0.1262 | HIT@20: 0.1478 | NDCG@5: 0.0905 | NDCG@10: 0.0958 | NDCG@20: 0.1013
+2026-02-09 21:03:10-CRITICAL: Epoch: [029] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:03:10-CRITICAL: v.s. BEST    | HIT@5: -0.34% | HIT@10: -0.52% | HIT@20: -0.35% | NDCG@5: -0.71% | NDCG@10: -0.75% | NDCG@20: -0.72%
+
+2026-02-09 21:05:16-INFO: Epoch: [030] | lr_adam: 0.0001 | rec_avg_loss: 6.1553 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:06:10-WARNING: Epoch: [030] | HIT@5: 0.1488 | HIT@10: 0.1679 | HIT@20: 0.1942 | NDCG@5: 0.1257 | NDCG@10: 0.1319 | NDCG@20: 0.1385
+2026-02-09 21:06:10-ERROR: Epoch: [030] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:06:10-DEBUG: >>> EarlyStopping counter: 4 out of 50
+2026-02-09 21:07:04-WARNING: Epoch: [030] | HIT@5: 0.1097 | HIT@10: 0.1263 | HIT@20: 0.1478 | NDCG@5: 0.0911 | NDCG@10: 0.0965 | NDCG@20: 0.1019
+2026-02-09 21:07:04-CRITICAL: Epoch: [030] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:07:04-CRITICAL: v.s. BEST    | HIT@5: -0.13% | HIT@10: -0.42% | HIT@20: -0.39% | NDCG@5: -0.02% | NDCG@10: -0.12% | NDCG@20: -0.16%
+
+2026-02-09 21:09:12-INFO: Epoch: [031] | lr_adam: 0.0001 | rec_avg_loss: 6.152 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:10:06-WARNING: Epoch: [031] | HIT@5: 0.1486 | HIT@10: 0.1682 | HIT@20: 0.1944 | NDCG@5: 0.1248 | NDCG@10: 0.1311 | NDCG@20: 0.1377
+2026-02-09 21:10:06-ERROR: Epoch: [031] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:10:06-DEBUG: >>> EarlyStopping counter: 5 out of 50
+2026-02-09 21:11:01-WARNING: Epoch: [031] | HIT@5: 0.1095 | HIT@10: 0.1260 | HIT@20: 0.1470 | NDCG@5: 0.0904 | NDCG@10: 0.0958 | NDCG@20: 0.1010
+2026-02-09 21:11:01-CRITICAL: Epoch: [031] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:11:01-CRITICAL: v.s. BEST    | HIT@5: -0.31% | HIT@10: -0.64% | HIT@20: -0.93% | NDCG@5: -0.74% | NDCG@10: -0.83% | NDCG@20: -0.97%
+
+2026-02-09 21:13:06-INFO: Epoch: [032] | lr_adam: 0.0001 | rec_avg_loss: 6.1457 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:14:01-WARNING: Epoch: [032] | HIT@5: 0.1486 | HIT@10: 0.1681 | HIT@20: 0.1944 | NDCG@5: 0.1257 | NDCG@10: 0.1319 | NDCG@20: 0.1386
+2026-02-09 21:14:01-ERROR: Epoch: [032] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:14:01-DEBUG: >>> EarlyStopping counter: 6 out of 50
+2026-02-09 21:14:55-WARNING: Epoch: [032] | HIT@5: 0.1094 | HIT@10: 0.1267 | HIT@20: 0.1475 | NDCG@5: 0.0908 | NDCG@10: 0.0964 | NDCG@20: 0.1016
+2026-02-09 21:14:55-CRITICAL: Epoch: [032] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:14:55-CRITICAL: v.s. BEST    | HIT@5: -0.42% | HIT@10: -0.08% | HIT@20: -0.58% | NDCG@5: -0.31% | NDCG@10: -0.17% | NDCG@20: -0.38%
+
+2026-02-09 21:17:02-INFO: Epoch: [033] | lr_adam: 0.0001 | rec_avg_loss: 6.1411 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:17:56-WARNING: Epoch: [033] | HIT@5: 0.1486 | HIT@10: 0.1681 | HIT@20: 0.1943 | NDCG@5: 0.1255 | NDCG@10: 0.1318 | NDCG@20: 0.1384
+2026-02-09 21:17:56-ERROR: Epoch: [033] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:17:56-DEBUG: >>> EarlyStopping counter: 7 out of 50
+2026-02-09 21:18:51-WARNING: Epoch: [033] | HIT@5: 0.1094 | HIT@10: 0.1265 | HIT@20: 0.1475 | NDCG@5: 0.0908 | NDCG@10: 0.0963 | NDCG@20: 0.1015
+2026-02-09 21:18:51-CRITICAL: Epoch: [033] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:18:51-CRITICAL: v.s. BEST    | HIT@5: -0.42% | HIT@10: -0.26% | HIT@20: -0.57% | NDCG@5: -0.37% | NDCG@10: -0.31% | NDCG@20: -0.47%
+
+2026-02-09 21:20:58-INFO: Epoch: [034] | lr_adam: 0.0001 | rec_avg_loss: 6.1343 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:21:52-WARNING: Epoch: [034] | HIT@5: 0.1483 | HIT@10: 0.1674 | HIT@20: 0.1942 | NDCG@5: 0.1246 | NDCG@10: 0.1307 | NDCG@20: 0.1375
+2026-02-09 21:21:52-ERROR: Epoch: [034] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:21:52-DEBUG: >>> EarlyStopping counter: 8 out of 50
+2026-02-09 21:22:47-WARNING: Epoch: [034] | HIT@5: 0.1092 | HIT@10: 0.1259 | HIT@20: 0.1474 | NDCG@5: 0.0905 | NDCG@10: 0.0958 | NDCG@20: 0.1012
+2026-02-09 21:22:47-CRITICAL: Epoch: [034] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:22:47-CRITICAL: v.s. BEST    | HIT@5: -0.56% | HIT@10: -0.75% | HIT@20: -0.66% | NDCG@5: -0.71% | NDCG@10: -0.77% | NDCG@20: -0.78%
+
+2026-02-09 21:24:53-INFO: Epoch: [035] | lr_adam: 0.0001 | rec_avg_loss: 6.1312 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:25:47-WARNING: Epoch: [035] | HIT@5: 0.1488 | HIT@10: 0.1676 | HIT@20: 0.1941 | NDCG@5: 0.1257 | NDCG@10: 0.1318 | NDCG@20: 0.1385
+2026-02-09 21:25:47-ERROR: Epoch: [035] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:25:47-DEBUG: >>> EarlyStopping counter: 9 out of 50
+2026-02-09 21:26:42-WARNING: Epoch: [035] | HIT@5: 0.1096 | HIT@10: 0.1263 | HIT@20: 0.1472 | NDCG@5: 0.0909 | NDCG@10: 0.0963 | NDCG@20: 0.1016
+2026-02-09 21:26:42-CRITICAL: Epoch: [035] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:26:42-CRITICAL: v.s. BEST    | HIT@5: -0.16% | HIT@10: -0.45% | HIT@20: -0.74% | NDCG@5: -0.20% | NDCG@10: -0.30% | NDCG@20: -0.46%
+
+2026-02-09 21:28:47-INFO: Epoch: [036] | lr_adam: 0.0001 | rec_avg_loss: 6.1234 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:29:42-WARNING: Epoch: [036] | HIT@5: 0.1478 | HIT@10: 0.1678 | HIT@20: 0.1943 | NDCG@5: 0.1243 | NDCG@10: 0.1308 | NDCG@20: 0.1375
+2026-02-09 21:29:42-ERROR: Epoch: [036] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:29:42-DEBUG: >>> EarlyStopping counter: 10 out of 50
+2026-02-09 21:30:35-WARNING: Epoch: [036] | HIT@5: 0.1093 | HIT@10: 0.1260 | HIT@20: 0.1475 | NDCG@5: 0.0902 | NDCG@10: 0.0956 | NDCG@20: 0.1010
+2026-02-09 21:30:35-CRITICAL: Epoch: [036] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:30:35-CRITICAL: v.s. BEST    | HIT@5: -0.48% | HIT@10: -0.64% | HIT@20: -0.54% | NDCG@5: -1.05% | NDCG@10: -1.05% | NDCG@20: -1.03%
+
+2026-02-09 21:32:43-INFO: Epoch: [037] | lr_adam: 0.0001 | rec_avg_loss: 6.1222 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:33:37-WARNING: Epoch: [037] | HIT@5: 0.1480 | HIT@10: 0.1676 | HIT@20: 0.1934 | NDCG@5: 0.1243 | NDCG@10: 0.1307 | NDCG@20: 0.1372
+2026-02-09 21:33:37-ERROR: Epoch: [037] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:33:37-DEBUG: >>> EarlyStopping counter: 11 out of 50
+2026-02-09 21:34:32-WARNING: Epoch: [037] | HIT@5: 0.1094 | HIT@10: 0.1262 | HIT@20: 0.1466 | NDCG@5: 0.0904 | NDCG@10: 0.0958 | NDCG@20: 0.1010
+2026-02-09 21:34:32-CRITICAL: Epoch: [037] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:34:32-CRITICAL: v.s. BEST    | HIT@5: -0.42% | HIT@10: -0.50% | HIT@20: -1.14% | NDCG@5: -0.78% | NDCG@10: -0.75% | NDCG@20: -1.01%
+
+2026-02-09 21:36:38-INFO: Epoch: [038] | lr_adam: 0.0001 | rec_avg_loss: 6.1164 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:37:32-WARNING: Epoch: [038] | HIT@5: 0.1483 | HIT@10: 0.1677 | HIT@20: 0.1938 | NDCG@5: 0.1247 | NDCG@10: 0.1310 | NDCG@20: 0.1375
+2026-02-09 21:37:32-ERROR: Epoch: [038] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:37:32-DEBUG: >>> EarlyStopping counter: 12 out of 50
+2026-02-09 21:38:27-WARNING: Epoch: [038] | HIT@5: 0.1093 | HIT@10: 0.1260 | HIT@20: 0.1467 | NDCG@5: 0.0906 | NDCG@10: 0.0959 | NDCG@20: 0.1011
+2026-02-09 21:38:27-CRITICAL: Epoch: [038] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:38:27-CRITICAL: v.s. BEST    | HIT@5: -0.47% | HIT@10: -0.67% | HIT@20: -1.11% | NDCG@5: -0.61% | NDCG@10: -0.70% | NDCG@20: -0.90%
+
+2026-02-09 21:40:32-INFO: Epoch: [039] | lr_adam: 0.0001 | rec_avg_loss: 6.1145 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:41:27-WARNING: Epoch: [039] | HIT@5: 0.1478 | HIT@10: 0.1674 | HIT@20: 0.1937 | NDCG@5: 0.1252 | NDCG@10: 0.1315 | NDCG@20: 0.1381
+2026-02-09 21:41:27-ERROR: Epoch: [039] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:41:27-DEBUG: >>> EarlyStopping counter: 13 out of 50
+2026-02-09 21:42:22-WARNING: Epoch: [039] | HIT@5: 0.1090 | HIT@10: 0.1256 | HIT@20: 0.1472 | NDCG@5: 0.0906 | NDCG@10: 0.0959 | NDCG@20: 0.1014
+2026-02-09 21:42:22-CRITICAL: Epoch: [039] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:42:22-CRITICAL: v.s. BEST    | HIT@5: -0.72% | HIT@10: -1.00% | HIT@20: -0.75% | NDCG@5: -0.59% | NDCG@10: -0.67% | NDCG@20: -0.64%
+
+2026-02-09 21:44:29-INFO: Epoch: [040] | lr_adam: 0.0001 | rec_avg_loss: 6.109 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:45:24-WARNING: Epoch: [040] | HIT@5: 0.1486 | HIT@10: 0.1676 | HIT@20: 0.1936 | NDCG@5: 0.1248 | NDCG@10: 0.1309 | NDCG@20: 0.1375
+2026-02-09 21:45:24-ERROR: Epoch: [040] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:45:24-DEBUG: >>> EarlyStopping counter: 14 out of 50
+2026-02-09 21:46:18-WARNING: Epoch: [040] | HIT@5: 0.1088 | HIT@10: 0.1255 | HIT@20: 0.1466 | NDCG@5: 0.0905 | NDCG@10: 0.0958 | NDCG@20: 0.1011
+2026-02-09 21:46:18-CRITICAL: Epoch: [040] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:46:18-CRITICAL: v.s. BEST    | HIT@5: -0.89% | HIT@10: -1.05% | HIT@20: -1.18% | NDCG@5: -0.71% | NDCG@10: -0.76% | NDCG@20: -0.87%
+
+2026-02-09 21:48:23-INFO: Epoch: [041] | lr_adam: 0.0001 | rec_avg_loss: 6.1068 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:49:18-WARNING: Epoch: [041] | HIT@5: 0.1480 | HIT@10: 0.1674 | HIT@20: 0.1940 | NDCG@5: 0.1251 | NDCG@10: 0.1313 | NDCG@20: 0.1381
+2026-02-09 21:49:18-ERROR: Epoch: [041] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:49:18-DEBUG: >>> EarlyStopping counter: 15 out of 50
+2026-02-09 21:50:12-WARNING: Epoch: [041] | HIT@5: 0.1087 | HIT@10: 0.1259 | HIT@20: 0.1467 | NDCG@5: 0.0903 | NDCG@10: 0.0958 | NDCG@20: 0.1010
+2026-02-09 21:50:12-CRITICAL: Epoch: [041] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:50:12-CRITICAL: v.s. BEST    | HIT@5: -0.98% | HIT@10: -0.75% | HIT@20: -1.10% | NDCG@5: -0.92% | NDCG@10: -0.82% | NDCG@20: -0.99%
+
+2026-02-09 21:52:18-INFO: Epoch: [042] | lr_adam: 0.0001 | rec_avg_loss: 6.1022 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:53:12-WARNING: Epoch: [042] | HIT@5: 0.1481 | HIT@10: 0.1676 | HIT@20: 0.1935 | NDCG@5: 0.1256 | NDCG@10: 0.1319 | NDCG@20: 0.1384
+2026-02-09 21:53:12-ERROR: Epoch: [042] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:53:12-DEBUG: >>> EarlyStopping counter: 16 out of 50
+2026-02-09 21:54:07-WARNING: Epoch: [042] | HIT@5: 0.1094 | HIT@10: 0.1261 | HIT@20: 0.1468 | NDCG@5: 0.0910 | NDCG@10: 0.0963 | NDCG@20: 0.1016
+2026-02-09 21:54:07-CRITICAL: Epoch: [042] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:54:07-CRITICAL: v.s. BEST    | HIT@5: -0.39% | HIT@10: -0.60% | HIT@20: -1.00% | NDCG@5: -0.15% | NDCG@10: -0.24% | NDCG@20: -0.46%
+
+2026-02-09 21:56:14-INFO: Epoch: [043] | lr_adam: 0.0001 | rec_avg_loss: 6.0992 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 21:57:08-WARNING: Epoch: [043] | HIT@5: 0.1480 | HIT@10: 0.1675 | HIT@20: 0.1933 | NDCG@5: 0.1243 | NDCG@10: 0.1306 | NDCG@20: 0.1371
+2026-02-09 21:57:08-ERROR: Epoch: [043] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 21:57:08-DEBUG: >>> EarlyStopping counter: 17 out of 50
+2026-02-09 21:58:03-WARNING: Epoch: [043] | HIT@5: 0.1087 | HIT@10: 0.1253 | HIT@20: 0.1467 | NDCG@5: 0.0900 | NDCG@10: 0.0954 | NDCG@20: 0.1008
+2026-02-09 21:58:03-CRITICAL: Epoch: [043] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 21:58:03-CRITICAL: v.s. BEST    | HIT@5: -1.03% | HIT@10: -1.21% | HIT@20: -1.10% | NDCG@5: -1.18% | NDCG@10: -1.23% | NDCG@20: -1.22%
+
+2026-02-09 22:00:08-INFO: Epoch: [044] | lr_adam: 0.0001 | rec_avg_loss: 6.0924 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 22:01:02-WARNING: Epoch: [044] | HIT@5: 0.1479 | HIT@10: 0.1675 | HIT@20: 0.1930 | NDCG@5: 0.1252 | NDCG@10: 0.1315 | NDCG@20: 0.1379
+2026-02-09 22:01:02-ERROR: Epoch: [044] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 22:01:02-DEBUG: >>> EarlyStopping counter: 18 out of 50
+2026-02-09 22:01:56-WARNING: Epoch: [044] | HIT@5: 0.1087 | HIT@10: 0.1257 | HIT@20: 0.1465 | NDCG@5: 0.0905 | NDCG@10: 0.0960 | NDCG@20: 0.1012
+2026-02-09 22:01:56-CRITICAL: Epoch: [044] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 22:01:56-CRITICAL: v.s. BEST    | HIT@5: -1.03% | HIT@10: -0.92% | HIT@20: -1.24% | NDCG@5: -0.66% | NDCG@10: -0.61% | NDCG@20: -0.79%
+
+2026-02-09 22:04:02-INFO: Epoch: [045] | lr_adam: 0.0001 | rec_avg_loss: 6.0941 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 22:04:57-WARNING: Epoch: [045] | HIT@5: 0.1479 | HIT@10: 0.1674 | HIT@20: 0.1935 | NDCG@5: 0.1248 | NDCG@10: 0.1311 | NDCG@20: 0.1377
+2026-02-09 22:04:57-ERROR: Epoch: [045] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 22:04:57-DEBUG: >>> EarlyStopping counter: 19 out of 50
+2026-02-09 22:05:51-WARNING: Epoch: [045] | HIT@5: 0.1092 | HIT@10: 0.1255 | HIT@20: 0.1463 | NDCG@5: 0.0911 | NDCG@10: 0.0963 | NDCG@20: 0.1015
+2026-02-09 22:05:51-CRITICAL: Epoch: [045] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 22:05:51-CRITICAL: v.s. BEST    | HIT@5: -0.53% | HIT@10: -1.07% | HIT@20: -1.40% | NDCG@5: -0.06% | NDCG@10: -0.29% | NDCG@20: -0.48%
+
+2026-02-09 22:07:58-INFO: Epoch: [046] | lr_adam: 0.0001 | rec_avg_loss: 6.0849 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 22:08:52-WARNING: Epoch: [046] | HIT@5: 0.1485 | HIT@10: 0.1674 | HIT@20: 0.1935 | NDCG@5: 0.1257 | NDCG@10: 0.1318 | NDCG@20: 0.1384
+2026-02-09 22:08:52-ERROR: Epoch: [046] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 22:08:52-DEBUG: >>> EarlyStopping counter: 20 out of 50
+2026-02-09 22:09:47-WARNING: Epoch: [046] | HIT@5: 0.1092 | HIT@10: 0.1259 | HIT@20: 0.1470 | NDCG@5: 0.0909 | NDCG@10: 0.0963 | NDCG@20: 0.1016
+2026-02-09 22:09:47-CRITICAL: Epoch: [046] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 22:09:47-CRITICAL: v.s. BEST    | HIT@5: -0.60% | HIT@10: -0.73% | HIT@20: -0.89% | NDCG@5: -0.23% | NDCG@10: -0.29% | NDCG@20: -0.44%
+
+2026-02-09 22:11:52-INFO: Epoch: [047] | lr_adam: 0.0001 | rec_avg_loss: 6.0875 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 22:12:46-WARNING: Epoch: [047] | HIT@5: 0.1478 | HIT@10: 0.1671 | HIT@20: 0.1931 | NDCG@5: 0.1252 | NDCG@10: 0.1315 | NDCG@20: 0.1380
+2026-02-09 22:12:46-ERROR: Epoch: [047] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 22:12:46-DEBUG: >>> EarlyStopping counter: 21 out of 50
+2026-02-09 22:13:41-WARNING: Epoch: [047] | HIT@5: 0.1088 | HIT@10: 0.1255 | HIT@20: 0.1465 | NDCG@5: 0.0904 | NDCG@10: 0.0958 | NDCG@20: 0.1011
+2026-02-09 22:13:41-CRITICAL: Epoch: [047] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 22:13:41-CRITICAL: v.s. BEST    | HIT@5: -0.97% | HIT@10: -1.07% | HIT@20: -1.23% | NDCG@5: -0.74% | NDCG@10: -0.76% | NDCG@20: -0.86%
+
+2026-02-09 22:15:46-INFO: Epoch: [048] | lr_adam: 0.0001 | rec_avg_loss: 6.0846 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 22:16:41-WARNING: Epoch: [048] | HIT@5: 0.1477 | HIT@10: 0.1676 | HIT@20: 0.1934 | NDCG@5: 0.1253 | NDCG@10: 0.1317 | NDCG@20: 0.1382
+2026-02-09 22:16:41-ERROR: Epoch: [048] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 22:16:41-DEBUG: >>> EarlyStopping counter: 22 out of 50
+2026-02-09 22:17:35-WARNING: Epoch: [048] | HIT@5: 0.1092 | HIT@10: 0.1253 | HIT@20: 0.1461 | NDCG@5: 0.0907 | NDCG@10: 0.0959 | NDCG@20: 0.1011
+2026-02-09 22:17:35-CRITICAL: Epoch: [048] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 22:17:35-CRITICAL: v.s. BEST    | HIT@5: -0.58% | HIT@10: -1.23% | HIT@20: -1.48% | NDCG@5: -0.49% | NDCG@10: -0.74% | NDCG@20: -0.88%
+
+2026-02-09 22:19:42-INFO: Epoch: [049] | lr_adam: 1e-05 | rec_avg_loss: 6.0766 | Message: 0209-192154-Grocery_and_Gourmet_Food-G&G_Food_first_train
+2026-02-09 22:20:36-WARNING: Epoch: [049] | HIT@5: 0.1479 | HIT@10: 0.1673 | HIT@20: 0.1936 | NDCG@5: 0.1253 | NDCG@10: 0.1316 | NDCG@20: 0.1382
+2026-02-09 22:20:36-ERROR: Epoch: [049] | HIT@5: 0.1490 | HIT@10: 0.1683 | HIT@20: 0.1953 | NDCG@5: 0.1261 | NDCG@10: 0.1324 | NDCG@20: 0.1390
+2026-02-09 22:20:36-DEBUG: >>> EarlyStopping counter: 23 out of 50
+2026-02-09 22:21:31-WARNING: Epoch: [049] | HIT@5: 0.1087 | HIT@10: 0.1254 | HIT@20: 0.1462 | NDCG@5: 0.0904 | NDCG@10: 0.0958 | NDCG@20: 0.1010
+2026-02-09 22:21:31-CRITICAL: Epoch: [049] | HIT@5: 0.1098 | HIT@10: 0.1268 | HIT@20: 0.1483 | NDCG@5: 0.0911 | NDCG@10: 0.0966 | NDCG@20: 0.1020
+2026-02-09 22:21:31-CRITICAL: v.s. BEST    | HIT@5: -1.03% | HIT@10: -1.10% | HIT@20: -1.43% | NDCG@5: -0.81% | NDCG@10: -0.83% | NDCG@20: -1.00%
+
