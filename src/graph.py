@@ -505,7 +505,9 @@ if __name__ == "__main__":
         # "ml-1m",
         # "Sports",
         # "Toys",
-         "Grocery_and_Gourmet_Food"
+        "Video_Games",
+        # "Sports_and_Outdoors",
+        # "Grocery_and_Gourmet_Food"
     ]
     for dataset in dataset_list:
         data_root = "../data"

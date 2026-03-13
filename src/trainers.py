@@ -91,10 +91,6 @@ class Trainer:
         self.optim_adam = AdamW(self.model.parameters(), lr=args.lr_adam, weight_decay=args.weight_decay)
         self.scheduler = self.get_scheduler(self.optim_adam)
 
-        # * prepare padding subseq for subseq embedding update
-        self.all_subseq = self.get_all_pad_subseq(self.graph_dataloader)
-        self.pad_mask = self.all_subseq > 0
-        self.num_non_pad = self.pad_mask.sum(dim=1, keepdim=True)
         self.L = args.avg_window_size
 
         self.best_scores = {
@@ -279,20 +275,45 @@ class Trainer:
     def subseq_embed_update(self, epoch):
         self.model.item_embeddings.cpu()
         self.model.subseq_embeddings.cpu()
-        subseq_emb = self.model.item_embeddings(self.all_subseq)
 
-        subseq_emb_avg: Tensor = (
-            torch.sum(subseq_emb * self.pad_mask.unsqueeze(-1), dim=1) / self.num_non_pad
-        )  # todo: mean换linear
-        # * Three subseq embed update methods: 1. nn.Parameter 2. nn.Embedding 3. model.subseq_embeddings
-        # self.model.subseq_embeddings = nn.Parameter(subseq_emb_avg)
-        # self.model.subseq_embeddings = subseq_emb_avg
+        weight = self.model.subseq_embeddings.weight.data
+        seen_ids = set()
+        write_idx = 0
 
-        # * accelerate convergence
-        self.model.subseq_embeddings.weight.data = (
-            subseq_emb_avg if epoch == 0 else (subseq_emb_avg + self.model.subseq_embeddings.weight.data) / 2
-        )
+        # Stream from dataloader to avoid storing all subsequences in memory
+        for _, (rec_batch) in enumerate(self.graph_dataloader):
+            subseq_id, _, subsequence, _, _, _ = rec_batch
+            # deduplicate: only process first occurrence of each subseq id
+            mask = []
+            for sid in subseq_id.tolist():
+                key = sid if isinstance(sid, int) else tuple(sid) if hasattr(sid, '__iter__') else sid
+                if key not in seen_ids:
+                    seen_ids.add(key)
+                    mask.append(True)
+                else:
+                    mask.append(False)
+            mask = torch.tensor(mask)
+            if not mask.any():
+                continue
+            subseq = subsequence[mask]
+            pad_mask = subseq > 0
+            num_non_pad = pad_mask.sum(dim=1, keepdim=True)
 
+            batch_emb = self.model.item_embeddings(subseq)
+            batch_avg = (
+                torch.sum(batch_emb * pad_mask.unsqueeze(-1), dim=1) / num_non_pad
+            )
+            del batch_emb, subseq, pad_mask, num_non_pad
+
+            n = batch_avg.shape[0]
+            if epoch == 0:
+                weight[write_idx:write_idx + n] = batch_avg
+            else:
+                weight[write_idx:write_idx + n].add_(batch_avg).div_(2)
+            del batch_avg
+            write_idx += n
+
+        del seen_ids
         self.model.item_embeddings.to(self.device)
         self.model.subseq_embeddings.to(self.device)
 
